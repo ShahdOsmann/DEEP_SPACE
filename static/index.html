@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exoplanet Gateway</title>
+    <link rel="stylesheet" href="style-home.css">
+</head>
+<body>
+
+<select id="language-switcher">
+  <option value="en">English</option>
+  <option value="ar">العربية</option>
+</select>
+
+<!-- HERO SECTION -->
+<section class="main home" style="--homeImageSrc: url(images/space-bg.jpg)">
+    <div class="home-text">
+        <h2 class="small" data-i18n="entering">You are now entering</h2>
+        <h1 data-i18n="deep_space">DEEP SPACE</h1>
+        <h3 data-i18n="select_planet">Select a planet below</h3>
+
+        <div class="scroll-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none"
+                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="5 12 12 19 19 12"></polyline>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- PLANET SELECTION -->
+<section class="main universe" id="universe" style="--homeImageSrc: url(images/space-bg.jpg)">
+
+    <div class="planet-row left">
+        <img src="images/mercury.png" alt="mercury">
+        <div class="planet-info">
+            <h2><span data-i18n="mercury">MERCURY</span></h2>
+            <p data-i18n="mercury_desc">Smallest planet, closest to the Sun, with extreme temperatures.</p>
+            <a href="planets/mercury.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+    <div class="planet-row right">
+        <img src="images/venus2.png" alt="venus">
+        <div class="planet-info">
+            <h2><span data-i18n="venus">VENUS</span></h2>
+            <p data-i18n="venus_desc">Earth-like in size, but with a thick toxic atmosphere.</p>
+            <a href="planets/venus.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+    <div class="planet-row left">
+        <img src="images/earth.png" alt="earth">
+        <div class="planet-info">
+            <h2><span data-i18n="earth">EARTH</span></h2>
+            <p data-i18n="earth_desc">The only known planet with liquid water and life.</p>
+            <a href="planets/earth.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+    <div class="planet-row right">
+        <img src="images/mars.png" alt="mars">
+        <div class="planet-info">
+            <h2><span data-i18n="mars">MARS</span></h2>
+            <p data-i18n="mars_desc">The red desert world, home to giant volcanoes and canyons.</p>
+            <a href="planets/mars.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+    <div class="planet-row left">
+        <img src="images/jupiter.png" alt="jupiter">
+        <div class="planet-info">
+            <h2><span data-i18n="jupiter">JUPITER</span></h2>
+            <p data-i18n="jupiter_desc">The largest planet with a massive storm and many moons.</p>
+            <a href="planets/jupiter.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+    <div class="planet-row right">
+        <img src="images/saturn.png" alt="saturn">
+        <div class="planet-info">
+            <h2><span data-i18n="saturn">SATURN</span></h2>
+            <p data-i18n="saturn_desc">Famous for its stunning icy rings and countless moons.</p>
+            <a href="planets/saturn.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+    <div class="planet-row left">
+        <img src="images/uranus.png" alt="uranus">
+        <div class="planet-info">
+            <h2><span data-i18n="uranus">URANUS</span></h2>
+            <p data-i18n="uranus_desc">An ice giant with a tilted axis.</p>
+            <a href="planets/uranus.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+    <div class="planet-row right">
+        <img src="images/neptune.png" alt="neptune">
+        <div class="planet-info">
+            <h2><span data-i18n="neptune">NEPTUNE</span></h2>
+            <p data-i18n="neptune_desc">The farthest ice giant, with supersonic winds.</p>
+            <a href="planets/neptune.html" class="enter-link" data-i18n="enter_orbit">ENTER ORBIT</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- CHATBOT -->
+<div id="chatbot-container">
+    <div id="chatbot-header" data-i18n="ask_ai">
+        Ask the AI
+        <button id="chatbot-toggle" style="float:right;">➖</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+        <input type="text" id="user-input" placeholder="Ask me about planets...">
+        <button onclick="sendMessage()" data-i18n="send">Send</button>
+    </div>
+</div>
+
+<script src="chatbot.js"></script>
+<script src="language.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style-fields.css">
+    <title data-i18n="title">Venus</title>
+</head>
+<body>
+
+<!-- LANGUAGE SWITCHER -->
+<select id="language-switcher" style="position: fixed; top: 20px; right: 20px; z-index: 999;">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+</select>
+
+<!-- HERO SECTION -->
+<section class="main" id="main" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <div>
+        <h2 data-i18n="hero_title">Welcome to<br><span>Venus</span></h2>
+        <h3 data-i18n="hero_subtitle">The hottest planet in our Solar System</h3>
+
+        <a href="#article" class="main-btn" data-i18n="btn_about">about the planet</a>
+        <a href="#roadmap" class="main-btn" data-i18n="btn_stats">statistics about the planet</a>
+        <a href="#video" class="main-btn" data-i18n="btn_video">Explanation video</a>
+    </div>
+</section>
+
+<!-- ABOUT PLANET -->
+<section class="main" id="second" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title" id="article"><span data-i18n="about_title">about Venus</span></h2>
+
+    <div class="content">
+        <p data-i18n="about_text">
+            Venus is the second planet from the Sun and is similar in size and structure to Earth, often called Earth's twin.
+            It has a thick toxic atmosphere causing extreme greenhouse effect and is the hottest planet.
+        </p>
+    </div>
+</section>
+
+<!-- PLANET DATA -->
+<section class="main" id="roadmap" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title"><span data-i18n="data_title">data about Venus</span></h2>
+
+    <div style="text-align: center; font-size: 1.5em; color: #f0f0f0; line-height: 2;">
+        <span data-i18n="data_orbit"><strong>Orbital Period:</strong> 225 Earth days</span><br>
+        <span data-i18n="data_rotation"><strong>Rotation Period:</strong> 243 Earth days (retrograde)</span><br>
+        <span data-i18n="data_diameter"><strong>Diameter:</strong> 12,104 km</span><br>
+        <span data-i18n="data_mass"><strong>Mass:</strong> 4.87 × 10²⁴ kg</span><br>
+        <span data-i18n="data_gravity"><strong>Surface Gravity:</strong> 8.87 m/s²</span><br>
+        <span data-i18n="data_temp"><strong>Average Temperature:</strong> 465°C</span><br>
+        <span data-i18n="data_moons"><strong>Moons:</strong> None</span><br>
+        <span data-i18n="data_atmosphere"><strong>Atmosphere:</strong> Thick CO₂, clouds of sulfuric acid</span>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="main" id="video" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title"><span data-i18n="video_title">video</span></h2>
+
+    <iframe width="100%" height="500"
+            src="https://www.youtube.com/embed/11HNCJ1QkO0"
+            allowfullscreen>
+    </iframe>
+</section> 
+<!-- CHATBOT -->
+<!-- CHATBOT -->
+<div id="chatbot-container">
+    <div id="chatbot-header" data-i18n="ask_ai">
+        Ask the AI
+        <button id="chatbot-toggle" style="float:right;">➖</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+        <input type="text" id="user-input" placeholder="Ask me about planets...">
+        <button onclick="sendMessage()" data-i18n="send">Send</button>
+    </div>
+</div>
+
+<script src="chatbot.js"></script>
+
+<script>
+    const Tbutton = document.getElementsByClassName("Tbutton")[0];
+
+    window.onscroll = () => {
+        Tbutton.style.opacity =
+            document.documentElement.scrollTop > 20 ? 1 : 0;
+    };
+
+    function gotop() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+ 
+<script src="../js/venus-language.js"></script>
+
+ 
+</body>
+</html>

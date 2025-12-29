@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars</title>
+    <link rel="stylesheet" href="style-fields.css">
+</head>
+<body>
+
+<!-- Language Switcher -->
+<select id="language-switcher" style="position:fixed; top:20px; left:20px; z-index:1000;">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+</select>
+
+<!-- HERO SECTION -->
+<section class="main" id="main" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <div>
+        <h2 data-i18n="hero_title">
+            Welcome to<br><span data-i18n="planet_name">Mars</span>
+        </h2>
+
+        <h3 data-i18n="hero_subtitle">
+            The Red Planet — a world of deserts and mountains
+        </h3>
+
+        <a href="#article" class="main-btn" data-i18n="btn_about">About the planet</a>
+        <a href="#roadmap" class="main-btn" data-i18n="btn_stats">Statistics about the planet</a>
+        <a href="#video" class="main-btn" data-i18n="btn_video">Explanation video</a>
+    </div>
+</section>
+
+<!-- ABOUT PLANET -->
+<section class="main" id="second" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title" id="article">
+        <span data-i18n="about_title">About Mars</span>
+    </h2>
+
+    <div class="content">
+        <p data-i18n="about_text">
+            Mars is the fourth planet from the Sun and is known as the Red Planet because of its
+            reddish surface caused by iron oxide.
+            It has a diameter of about 6,779 km, roughly half the size of Earth.
+            Mars has a thin atmosphere made mostly of carbon dioxide,
+            and its surface includes deserts, valleys, and Olympus Mons,
+            the largest volcano in the Solar System.
+            Mars rotates every 24.6 hours and completes an orbit in 687 Earth days.
+            It has two small moons, Phobos and Deimos.
+            Robotic missions such as Spirit, Opportunity, Curiosity,
+            and Perseverance have explored the planet searching for signs of water and life.
+        </p>
+    </div>
+</section>
+
+<!-- PLANET DATA -->
+<section class="main" id="roadmap" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title">
+        <span data-i18n="data_title">Data about Mars</span>
+    </h2>
+
+    <div style="text-align:center; font-size:1.5em; color:#f0f0f0; line-height:2;">
+        <span data-i18n="data_orbit"><strong>Orbital Period:</strong> 687 Earth days</span><br>
+        <span data-i18n="data_rotation"><strong>Rotation Period:</strong> 24.6 hours</span><br>
+        <span data-i18n="data_diameter"><strong>Diameter:</strong> 6,779 km</span><br>
+        <span data-i18n="data_mass"><strong>Mass:</strong> 6.42 × 10²³ kg</span><br>
+        <span data-i18n="data_gravity"><strong>Surface Gravity:</strong> 3.71 m/s²</span><br>
+        <span data-i18n="data_temp"><strong>Average Temperature:</strong> -60°C</span><br>
+        <span data-i18n="data_moons"><strong>Moons:</strong> 2 (Phobos, Deimos)</span><br>
+        <span data-i18n="data_atmos"><strong>Atmosphere:</strong> CO₂, N₂, Argon</span>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="main" id="video" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title"><span data-i18n="video_title">Video</span></h2>
+
+    <iframe width="100%" height="500"
+            src="https://www.youtube.com/embed/VdC4Z-2abHE">
+    </iframe>
+</section>
+
+<!-- CHATBOT -->
+<div id="chatbot-container">
+    <div id="chatbot-header" data-i18n="ask_ai">
+        Ask the AI
+        <button id="chatbot-toggle" style="float:right;">➖</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+        <input type="text" id="user-input" placeholder="Ask me about planets...">
+        <button onclick="sendMessage()" data-i18n="send">Send</button>
+    </div>
+</div>
+
+<script src="../chatbot.js"></script> 
+
+<script>
+    const Tbutton = document.getElementsByClassName("Tbutton")[0];
+
+    window.onscroll = () => {
+        Tbutton.style.opacity =
+            document.documentElement.scrollTop > 20 ? 1 : 0;
+    };
+
+    function gotop() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<script src="../js/mars-language.js"></script>
+</body>
+</html>

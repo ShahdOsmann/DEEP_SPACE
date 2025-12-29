@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercury</title>
+    <link rel="stylesheet" href="style-fields.css">
+</head>
+<body>
+
+<!-- Language Switcher -->
+<select id="language-switcher" style="position:fixed; top:20px; left:20px; z-index:1000;">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+</select>
+
+<!-- HERO SECTION -->
+<section class="main" id="main" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <div>
+        <h2 data-i18n="hero_title">
+            Welcome to<br><span data-i18n="planet_name">Mercury</span>
+        </h2>
+
+        <h3 data-i18n="hero_subtitle">
+            The smallest and innermost planet in the Solar System
+        </h3>
+
+        <a href="#article" class="main-btn" data-i18n="btn_about">About the planet</a>
+        <a href="#roadmap" class="main-btn" data-i18n="btn_stats">Statistics about the planet</a>
+        <a href="#video" class="main-btn" data-i18n="btn_video">Explanation video</a>
+    </div>
+</section>
+
+<!-- ABOUT PLANET -->
+<section class="main" id="second" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title" id="article">
+        <span data-i18n="about_title">About Mercury</span>
+    </h2>
+
+    <div class="content">
+        <p data-i18n="about_text">
+            Mercury is the closest planet to the Sun and the smallest planet in the Solar System.
+            It has a diameter of about 4,880 km, roughly 38% the size of Earth.
+            Mercury has almost no atmosphere, causing extreme temperature differences.
+            Daytime temperatures reach about 430°C, while nighttime temperatures drop to -180°C.
+            Its surface is heavily cratered, similar to the Moon.
+            Mercury completes one orbit around the Sun in just 88 Earth days.
+            Despite its small size, it has a very large iron core and a magnetic field.
+            Missions such as Mariner 10 and MESSENGER provided detailed maps of the planet.
+        </p>
+    </div>
+</section>
+
+<!-- PLANET DATA -->
+<section class="main" id="roadmap" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title">
+        <span data-i18n="data_title">Data about Mercury</span>
+    </h2>
+
+    <div style="text-align:center; font-size:1.5em; color:#f0f0f0; line-height:2;">
+        <span data-i18n="data_orbit"><strong>Orbital Period:</strong> 88 Earth days</span><br>
+        <span data-i18n="data_rotation"><strong>Rotation Period:</strong> 58.6 Earth days</span><br>
+        <span data-i18n="data_diameter"><strong>Diameter:</strong> 4,880 km</span><br>
+        <span data-i18n="data_mass"><strong>Mass:</strong> 3.30 × 10²³ kg</span><br>
+        <span data-i18n="data_gravity"><strong>Surface Gravity:</strong> 3.7 m/s²</span><br>
+        <span data-i18n="data_temp"><strong>Temperature:</strong> -180°C to 430°C</span><br>
+        <span data-i18n="data_moons"><strong>Moons:</strong> None</span><br>
+        <span data-i18n="data_atmos"><strong>Atmosphere:</strong> Very thin (oxygen, sodium, hydrogen)</span>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="main" id="video" style="--homeImageSrc: url(../images/OsirisPlanet.png)">
+    <h2 class="title">
+        <span data-i18n="video_title">Video</span>
+    </h2>
+
+    <iframe width="100%" height="500"
+            src="https://www.youtube.com/embed/T22blRX7ZU0"
+            allowfullscreen>
+    </iframe>
+</section>
+<!-- CHATBOT -->
+<div id="chatbot-container">
+    <div id="chatbot-header" data-i18n="ask_ai">
+        Ask the AI
+        <button id="chatbot-toggle" style="float:right;">➖</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+        <input type="text" id="user-input" placeholder="Ask me about planets...">
+        <button onclick="sendMessage()" data-i18n="send">Send</button>
+    </div>
+</div>
+
+<script src="../chatbot.js"></script> 
+
+<script>
+    const Tbutton = document.getElementsByClassName("Tbutton")[0];
+
+    window.onscroll = () => {
+        Tbutton.style.opacity =
+            document.documentElement.scrollTop > 20 ? 1 : 0;
+    };
+
+    function gotop() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<script src="../js/mercury-language.js"></script>
+</body>
+</html>
